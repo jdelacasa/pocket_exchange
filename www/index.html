@@ -65,7 +65,7 @@
 
 	<!-- Page 1 -->
 
-	<div data-role="page" id="inicio" >
+	<div data-role="page" id="inicio" data-title="Page Foo" >
         	<div data-role="header">
 		       <div data-role="navbar">
                		 <ul>
@@ -76,8 +76,6 @@
             		</div><!--/navbar -->
 
             		<h1> Inicio </h1>
-			<div id="propiedades">Cargando datos del dispositivo</div>
-        	</div>
 
 		<p id="propiedades">Cargando datos del dispositivo</p>
 	        <ul data-role="listview" >
@@ -90,13 +88,14 @@
        		</ul>
 
 	       <div data-role="footer">
+		<a href="foo.html" data-rel="dialog" data-transition="pop">Open dialog</a>
 	       </div>
 
     	</div>
 
 	<!-- Page 2 -->
 
-    <div data-role="page" id="pantalla2">
+    <div data-role="page" id="pantalla2" data-title="Page Foo">
             <div data-role="header">
 			 <div data-role="navbar">
                          <ul>
