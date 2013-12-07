@@ -63,16 +63,32 @@
         </script>
 
 
-	  <div data-role="page" id="inicio" >
         <div data-role="header">
-            <h1> Inicio </h1>
+	    <div data-role="navbar">
+                <ul>
+                    <li><a href="#pantalla1">Inicio</a></li>
+                    <li><a href="#pantalla2">Pantalla 2</a></li>
+                    <li><a href="#pantalla3">Otros</a></li>
+                </ul>
+            </div><!--/navbar -->
+
         </div>
-        <a href="#pantalla2" data-role="button"> Ir a Pantalla 2 </a>
-    </div>
+	
+	<!-- Page 1 -->
+
+	<div data-role="page" id="inicio" >
+        	<div data-role="header">
+            		<h1> Inicio </h1>
+			<div id="propiedades">Cargando datos del dispositivo</div>
+        	</div>
+
+	        <a href="#pantalla2" data-role="button"> Ir a Pantalla 2 </a>
+    	</div>
+	<!-- Page 2 -->
+
     <div data-role="page" id="pantalla2">
             <div data-role="header">
                 <h1> Pantalla 2 </h1>
-		<div id="propiedades">Cargando datos del dispositivo</div>
             </div>
             <a href="#" data-rel="back" data-role="button" > Regresar </a>
         <ul data-role="listview" >
@@ -84,15 +100,11 @@
             <li><a href="#pantalla3"> Pantalla 6 </a></li>
         </ul>
         <div data-role="footer">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#pantalla1">Inicio</a></li>
-                    <li><a href="#pantalla2">Pantalla 2</a></li>
-                    <li><a href="#pantalla3">Otros</a></li>
-                </ul>
-            </div><!--/navbar -->
         </div>
     </div>
+
+	<!-- Page 3 -->
+
     <div data-role="page" id="pantalla3">
         <h1> Pantalla 3 </h1>
          <a href="#" data-rel="back" data-role="button" > Regresar </a>
