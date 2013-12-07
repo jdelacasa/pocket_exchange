@@ -23,18 +23,18 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <title>Pocket Exchange</title>
     </head>
     <body>
         <div class="app">
-            <h1>PhoneGap</h1>
+            <h1>Pocket Exchange</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+		<div id="propiedades">Cargando datos del dispositivo</div>
             </div>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
         <script type="text/javascript">
 //            app.initialize();
 
@@ -48,27 +48,22 @@
 
 			//la variable elemento guarda una referencia a un elemento
 
-//div donde se muestran las propiedades obtenidas con PhoneGap
+			//div donde se muestran las propiedades obtenidas con PhoneGap
 
-var elemento = document.getElementById('propiedades');
+			var elemento = document.getElementById('propiedades');
+	
+			//la variable informacion guarda todas las propiedades obtenidas con PhoneGap
 
-//la variable informacion guarda todas las propiedades obtenidas con PhoneGap
+			var informacion='Nombre del dispositivo ' + device.name + '<br />' + 
+			'Version de Cordova: ' + device.cordova + '<br />' + 
+			'Sistema operativo: ' + device.platform + '<br />' +
+			'Version: ' + device.version + '<br />'+
+			'Identificador unico universal: ' + device.uuid + '<br />';
 
-var informacion='Nombre del dispositivo ' + device.name + '<br />' + 
-
-'Version de Cordova: ' + device.cordova + '<br />' + 
-
-'Sistema operativo: ' + device.platform + '<br />' +
-
-'Version: ' + device.version + '<br />'+
-
-'Identificador unico universal: ' + device.uuid + '<br />';
-
-elemento.innerHTML = informacion;
+			elemento.innerHTML = informacion;
 		}
 
         </script>
 
-	<div id="propiedades">Cargando datos del dispositivo</div>
     </body>
 </html>
