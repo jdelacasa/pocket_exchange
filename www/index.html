@@ -61,10 +61,9 @@
 
 
 			var url="https://blockchain.info/ticker";
-			var query;
 			$.getJSON(url,function(json){
-				$.each(json.results,function(i,tweet){
-			   		$("#results").append('<p>'+tweet.USD.buy+'</p>');
+				$.each(json.results,function(tweet){
+			   		$("#results").append('<p>'+tweet.buy+'</p>');
 				});
 			});		
 		}
