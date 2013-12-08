@@ -60,13 +60,31 @@
 			elemento.innerHTML = informacion;
 
 
-			var url="https://blockchain.info/ticker";
-			$.getJSON(url,function(json){
-				$.each(json.results,function(tweet){
-			   		$("#results").append('<p>'+tweet.buy+'</p>');
-				});
-			});		
 		}
+
+
+	// conect to api
+
+	function connect(e) 
+	{ 
+		var term= {button:e}; 
+		$.ajax({ 
+			url:'https://blockchain.info/ticker', 
+			type:'POST', 
+			data:term, 
+			dataType:'json', 
+			error:function(jqXHR,text_status,strError){ 
+			alert(“	no connection”);}, 
+			timeout:60000, 
+			success:function(data){ 
+				$("#results").html(""); 
+				for(var i in data){ 
+					$("#results").append("<li>"+data[i]+"</li>"); 
+				} 
+			} 
+		});
+	} - See more at: http://www.phonegapspain.com/tutorial/phonegap-con-jquery-y-respuestas-json/#sthash.SveZyzgx.dpuf
+
 
         </script>
 
