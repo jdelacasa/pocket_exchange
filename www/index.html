@@ -74,9 +74,11 @@
 			data:term, 
 			dataType:'json', 
 			error:function(jqXHR,text_status,strError){ 
-			alert(“	no connection”);}, 
+				alert("no connection");
+			}, 
 			timeout:60000, 
 			success:function(data){ 
+				alert("conectado");
 				$("#results").html(""); 
 				for(var i in data){ 
 					$("#results").append("<li>"+data[i]+"</li>"); 
