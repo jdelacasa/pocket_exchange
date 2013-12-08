@@ -70,7 +70,6 @@
 		var term= {button:e}; 
 		$.ajax({ 
 			url:'https://blockchain.info/ticker', 
-			type:'POST', 
 			data:term, 
 			dataType:'json', 
 			error:function(jqXHR,text_status,strError){ 
@@ -96,7 +95,7 @@
 
 	<div data-role="page" id="inicio" data-title="Page Foo" >
         	<div data-role="header">
-		       <div data-role="navbar">
+		       <div data-role=jjjjmnnavbar">
                		 <ul>
                     		<li><a href="#pantalla1">Inicio</a></li>
                    		<li><a href="#pantalla2">Pantalla 2</a></li>
